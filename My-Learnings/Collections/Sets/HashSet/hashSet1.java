@@ -9,6 +9,22 @@
  -> To print output in one by one we can use for each loop
  */
 import java.util.HashSet;
+/* 
+public class hashSet1 {
+    @SuppressWarnings("unchecked")
+    public static void main(String[] args) {
+        HashSet set = new HashSet(); 
+        set.add(75);
+        set.add(75.089898);
+        set.add("String");
+        set.add(new Scanner(System.in));
+        set.add(false);
+        set.add('a');
+
+        System.out.println(set);
+    }
+*/
+
 public class hashSet1 {
     public static void main(String[] args) {
         HashSet set =new HashSet<Integer>();
