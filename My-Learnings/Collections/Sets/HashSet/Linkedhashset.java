@@ -1,4 +1,4 @@
-
+//it used to store in insertion order
 import java.util.LinkedHashSet;
 
 public class Linkedhashset{
