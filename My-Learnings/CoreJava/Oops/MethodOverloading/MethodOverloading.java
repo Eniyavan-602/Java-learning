@@ -1,4 +1,6 @@
-
+/*
+ * Method Overloading / Polymorphism / compile Time Polymorphism / static Binding / Early Binding
+ */
 import java.util.Scanner;
 
 class Calculator{
