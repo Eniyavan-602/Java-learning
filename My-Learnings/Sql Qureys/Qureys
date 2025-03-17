@@ -1,0 +1,98 @@
+// To Saw database
+show database
+
+// create database
+
+create database Name
+
+
+//"Creation of an Table"
+CREATE TABLE Student(
+    id int,
+    firstname varchar(25),
+    lastname varchar(25),
+    age int,
+    email varchar(25),
+    branch varchar(25)
+)
+
+// insert value
+
+insert into tablename values();
+
+//describe table to saw sequence of table name
+
+desc/describe tablename
+
+// after giving values we have to see table means
+
+select * from tablename; 
+
+//  to use database
+use databasename;
+// creating table with constraints
+create table Student(
+    -> id int primary key,
+    -> firstname varchar(25) not null,
+    -> lastname varchar(25),
+    -> age int check(age>=15),
+    -> email varchar(25) unique,
+    ->  branch varchar(20) default "CS"
+    -> );
+    // to saw the sequence
+    desc Student
+    -> ;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| id        | int         | NO   | PRI | NULL    |       |
+| firstname | varchar(25) | NO   |     | NULL    |       |
+| lastname  | varchar(25) | YES  |     | NULL    |       |
+| age       | int         | YES  |     | NULL    |       |
+| email     | varchar(25) | YES  | UNI | NULL    |       |
+| branch    | varchar(20) | YES  |     | CS      |       |
++-----------+-------------+------+-----+---------+-------+
+// insert value with usage of default constraints
+INSERT INTO Student (id, firstname, lastname, age, email) VALUES (
+    ->     1,
+    ->     'Eniyavan',
+    ->     'Raja',
+    ->     21,
+    ->     'eniyavan822'
+    -> );
+
+// to view the inserted table 
+    select * from Student;
+    +----+-----------+----------+------+-------------+--------+
+    | id | firstname | lastname | age  | email       | branch |
+    +----+-----------+----------+------+-------------+--------+
+    |  1 | Eniyavan  | Raja     |   21 | eniyavan822 | CS     |
+    +----+-----------+----------+------+-------------+--------+
+    
+    //foreign key 
+    INSERT INTO Dept (Dept_id, dept_name) VALUES
+    ->     (201, 'CSE'),
+    ->     (202, 'ECE'),
+    ->     (203, 'MECH');
+// delete an table
+    drop table faculty;
+    // create an table with accept foreign keys
+    create table faculty(
+        -> faculty_id int primary key,
+        -> faculty_name varchar(25) not null,
+        -> email varchar(25) unique,
+        -> dept_id int,
+        -> foreign key(dept_id) references Dept(dept_id)
+        -> );
+
+// insert values
+insert into faculty values(1,"Ram","ram@gmail.com",203);
+
+//created Table
+select * from faculty
+-> ;
++------------+--------------+---------------+---------+
+| faculty_id | faculty_name | email         | dept_id |
++------------+--------------+---------------+---------+
+|          1 | Ram          | ram@gmail.com |     203 |
++------------+--------------+---------------+---------+
