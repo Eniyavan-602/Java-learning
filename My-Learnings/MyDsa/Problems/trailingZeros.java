@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class trailingZeros {
     public static void main(String[] args) {
        Scanner scan= new Scanner(System.in);
+       System.out.print("Enter an number: ");
         int n = scan.nextInt();
         trailingZero(n);
 
