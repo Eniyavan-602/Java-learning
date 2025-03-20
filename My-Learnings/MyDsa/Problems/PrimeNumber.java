@@ -6,8 +6,9 @@ public class PrimeNumber {
      Scanner scan = new Scanner(System.in);
      System.out.print("Enter an integer: ");
      int n = scan.nextInt();
-     boolean res = isPrime(n);
-     System.out.println("Prime :"+res);
+     //boolean res = isPrime(n);
+     //System.out.println("Is Prime: "+res);
+     sievePrintPrimeEfficien(n);
     }
     public static boolean prime(int n){  // normal Method
         if(n<2){
@@ -47,5 +48,35 @@ public class PrimeNumber {
             }
         }
         return true;
+    }
+    public static void sievePrintPrime(int n){
+        boolean[]arr = new boolean[n+1];
+        for(int i = 2; i <= n; i++){
+            if(arr[i] == false){
+                for(int j = 2*i; j <= n; j+=i){ // we can also write as j = i*i ex : 2*2 =4 3*3 = 9 ...
+                    arr[j] = true;
+                }
+            }
+        }
+        for (int i = 2; i <= n; i++) {
+            if(arr[i] == false){
+                System.out.println(i);
+            }
+        }
+    }
+    public static void sievePrintPrimeEfficien(int n){
+        boolean[]arr = new boolean[n+1];
+        for(int i = 2; i*i <= n; i++){
+            if(arr[i] == false){
+                for(int j = i*i; j <= n; j+=i){ 
+                    arr[j] = true;
+                }
+            }
+        }
+        for (int i = 2; i <= n; i++) {
+            if(arr[i] == false){
+                System.out.println("Prime Numbers Are: "+i);
+            }    /*               _      */
+        }//Time complexity is O(_/n(log n) )
     }
 }

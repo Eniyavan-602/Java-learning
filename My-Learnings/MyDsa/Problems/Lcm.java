@@ -13,10 +13,10 @@ public class Lcm {
         int n = scan.nextInt();
         System.out.print("Enter an Second Number: ");
         int m = scan.nextInt();
-        int res = lcd(n, m);
+        int res = lowestCommonDivisor(n, m);
         System.out.println("LCM of "+n+" and "+m+" is: "+res);
     }
-    /* 
+    
     public static int lcd(int a, int b){
         int res = Math.max(a, b); // Start from the maximum of a and b
         while (true) { 
@@ -26,7 +26,7 @@ public class Lcm {
             res++; // Increment res
         }
         return res; // Return the LCMs contains the max value
-    }*/
+    }
 
     /*
      * formula : lcm(a,b) * gcd(a, b) = a*b
@@ -46,8 +46,8 @@ public class Lcm {
         }
         return b;
     }
-    public static int lcd(int a,int b){
-
+    public static int lowestCommonDivisor(int a,int b){
+        //formula : lcm(a,b) * gcd(a, b) = a*b
             return (a*b)/gcd(a, b);
     }
 }
