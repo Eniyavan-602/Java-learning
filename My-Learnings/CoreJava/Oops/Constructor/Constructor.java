@@ -34,7 +34,6 @@ class Customer{
     public long getphoneNumber(){
         return phoneNumber;
     }
-
 }
 public class Constructor{
     public static void main(String[] args) {

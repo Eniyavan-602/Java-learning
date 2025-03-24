@@ -9,6 +9,7 @@ public class PrimeNumber {
      //boolean res = isPrime(n);
      //System.out.println("Is Prime: "+res);
      sievePrintPrimeEfficien(n);
+    
     }
     public static boolean prime(int n){  // normal Method
         if(n<2){
@@ -64,7 +65,7 @@ public class PrimeNumber {
             }
         }
     }
-    public static void sievePrintPrimeEfficien(int n){
+    public static void  sievePrintPrimeEfficien(int n){
         boolean[]arr = new boolean[n+1];
         for(int i = 2; i*i <= n; i++){
             if(arr[i] == false){
@@ -75,7 +76,7 @@ public class PrimeNumber {
         }
         for (int i = 2; i <= n; i++) {
             if(arr[i] == false){
-                System.out.println("Prime Numbers Are: "+i);
+                System.out.print(i+" ");
             }    /*               _      */
         }//Time complexity is O(_/n(log n) )
     }
