@@ -13,5 +13,6 @@ public class nNumbers { // Corrected class name (capital 'O' and 'N')
     public static int sum(int n) {
         int sum = (n * (n + 1)) / 2;
         return sum;
+        
     }
 }

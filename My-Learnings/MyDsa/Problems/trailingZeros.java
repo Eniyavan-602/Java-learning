@@ -16,5 +16,6 @@ public class trailingZeros {
             powerOf5 *=5;
         }
         System.out.println("NumberOfTrailingZeros: "+res);
+        System.out.println("NumberOfTrailingZeros: "+res);
     }
 }
