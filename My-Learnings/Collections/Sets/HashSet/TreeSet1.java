@@ -1,7 +1,7 @@
 // output in sorted order
 import java.util.TreeSet;
 
-public class treeSet{
+public class TreeSet1{
         public static void main(String[] args) {
             TreeSet<Integer> set = new TreeSet<>(); // we not have to give <Integer on right side>
             set.add(23);

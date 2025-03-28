@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class alphabetOrder{
+public class AlphabetOrder{
     public static void main(String[] args) {
      Scanner scan = new Scanner(System.in);  
      System.out.println("Enter an String: ");

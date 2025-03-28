@@ -25,7 +25,7 @@ public class hashSet1 {
     }
 */
 
-public class hashSet1 {
+public class HashSet1 {
     public static void main(String[] args) {
         HashSet set =new HashSet<Integer>();
         set.add(56);
