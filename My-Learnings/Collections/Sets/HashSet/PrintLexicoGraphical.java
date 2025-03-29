@@ -18,7 +18,7 @@ public class PrintLexicoGraphical {
     
     }
     public static void  lexicographical(String s){
-        String[]arr =s.split(s);
+        String[]arr =s.split(",");
         TreeSet<String>set =new TreeSet<String>();
         for(int i = 0; i < arr.length; i++){
           set.add(arr[i]);

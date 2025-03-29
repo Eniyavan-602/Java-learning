@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "My-Learnings\\MyDsa\\Problems"
+    ],
+    "java.project.referencedLibraries": [],
+    "java.debug.settings.onBuildFailureProceed": true
+}
